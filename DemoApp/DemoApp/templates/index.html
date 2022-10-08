@@ -539,6 +539,7 @@ footer p a:hover {
 <body class="landing-page ">
     {% if alert %}
       {{ alert }}
+
     {% endif %}
     <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg "  color-on-scroll="100"  id="sectionsNav">
         <div class="container">
@@ -546,7 +547,7 @@ footer p a:hover {
             
                 {% if id %}
                   {{ id }}
-                  <a href="http://localhost:8000/logout">Logout</a>
+                  <a class="nav-link" href="http://localhost:8000/logout">Logout</a>
                 {% endif %}
 
                 <a class="navbar-brand" href="#" target="_blank">HireConnect</a>
@@ -560,14 +561,20 @@ footer p a:hover {
                 <ul class="navbar-nav ml-auto">
                     {% if not id %}
                       {{ id }}
-                        <li class="nav-item">
-                          <a href="http://localhost:8000/login">Login</a>
-                        </li>
+                        <!--This is for the login system-->
+                        <!--<li class="nav-item">
+                          <a class="nav-link"  href="http://localhost:8000/login" >
+                            <i class="fa fa-sign-in"></i>
+                          </a>
+                        </li>-->
                     {% endif %}
 
-                    <li class="nav-item">
-                      <a href="http://localhost:8000/register">Register</a>
-                    </li>
+                    <!--This is for registration system-->
+                    <!--<li class="nav-item">
+                      <a class="nav-link"  href="http://localhost:8000/register" >
+                        <i class="fa fa-user-plus"></i>
+                      </a>
+                    </li>-->
                     
                     <li class="dropdown nav-item">
                       <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -604,6 +611,19 @@ footer p a:hover {
       						<i class="fa fa-instagram"></i>
       					</a>
       				</li>
+
+              <!--This is for the login system-->
+              <li class="nav-item">
+                <a class="nav-link"  href="http://localhost:8000/login" >
+                  <i class="fa fa-sign-in"></i>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link"  href="http://localhost:8000/register" >
+                  <i class="fa fa-user-plus"></i>
+                </a>
+              </li>
                 </ul>
             </div>
         </div>
@@ -677,11 +697,10 @@ footer p a:hover {
                           <div class="col-md-6 ml-auto mr-auto">
                             <!--<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a47c2a784683.5629a928cbcb7.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">-->
 
-
         
                           </div>
-                            <h4 class="card-title">Gigi Hadid <br>
-                              <small class="card-description text-muted">Model</small>
+                            <h4 class="card-title">Bhavani Gali <br>
+                              <small class="card-description text-muted">Developer</small>
                             </h4>
         
                           <div class="card-body">
@@ -702,7 +721,7 @@ footer p a:hover {
                             <!--<img src="http://www.onepercentfortheplanet.org/storage/individualmembership/FoundingMembers/russ_stoddard_large_square.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">-->
         
                           </div>
-                            <h4 class="card-title">Christian Louboutin<br>
+                            <h4 class="card-title">Bhargav Gali<br>
                               <small class="card-description text-muted">Designer</small>
                             </h4>
         
@@ -724,8 +743,8 @@ footer p a:hover {
                             <!--<img src="http://www.solstreamstudios.com/ss/wp-content/uploads/2015/11/Portrait-17-JRH-5018-PE-square.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">-->
         
                           </div>
-                            <h4 class="card-title">Kendall Jenner<br>
-                              <small class="card-description text-muted">Model</small>
+                            <h4 class="card-title">Danish Abdulla<br>
+                              <small class="card-description text-muted">Entrepreneur</small>
                             </h4>
         
                           <div class="card-body">

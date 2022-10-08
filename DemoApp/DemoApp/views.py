@@ -14,13 +14,20 @@ def verify(req):
     print(req.POST)
     users = User.objects.filter(username = req.POST['username'], pwd = req.POST['password'])
     if len(users) > 0:
-        return render(req, 'landing_page.html', {'id' : req.POST['username'], 'alert' : ''})
+        x = {
+            'username' : users[0].username,
+            'name' : users[0].name, 
+            'contact_no' : users[0].contact_no, 
+            'gender' : users[0].gender, 
+            'address' : users[0].address
+        }
+        return render(req, 'landing_page.html', x)
 
     else:
-        return render(req, 'index.html', {'id' : '', 'alert' : 'Invalid username or password'})
+        return render(req, 'index.html', {'id' : '', 'alert' : 'Invalid Username or Password'})
 
 def logout(req):
-    return render(req, 'index.html', {'id' : '', 'alert' : 'Logged out successfully'})
+    return render(req, 'index.html', {'id' : '', 'alert' : 'Logged Out Successfully !'})
 
 def register(req):
     return render(req, 'register.html', {})
@@ -36,4 +43,4 @@ def register_data(req):
         address = data['address']
     ).save()
 
-    return render(req, 'index.html', {'id' : '', 'alert' : 'User created successfully'})
+    return render(req, 'index.html', {'id' : '', 'alert' : 'User Created Successfully !'})

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Design by foolishdeveloper.com -->
-    <title>Registration form</title>
+    <title>Registration Form</title>
  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -95,6 +95,20 @@ input{
     font-size: 14px;
     font-weight: 300;
 }
+
+#gen{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
 ::placeholder{
     color: #e5e5e5;
 }
@@ -141,22 +155,22 @@ button{
     </div>
     <form action="http://localhost:8000/register_data/", method="POST">
         {% csrf_token %}
-        <h3>Register Here</h3>
+        <h3>Please Register Your Profile !</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Username" name="username">
+        <input type="text" placeholder="Username" name="username" required>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" name="password">
+        <input type="password" placeholder="Password" name="password" required>
 
         <label for="name">Name</label>
         <input type="text" placeholder="Name" name="name">
 
         <label for="contact_no">Contact Number</label>
-        <input type="text" placeholder="Contact Number" name="contact_no">
+        <input type="text" placeholder="Contact Number" name="contact_no" required>
 
-        <label for="gender">Name</label>
-        <select name="gender" placeholder="gender">
+        <label for="gender">Gender</label>
+        <select name="gender" id="gen" placeholder="gender">
             <option value="M">Male</option>
             <option value="F">Female</option>
         </select>
@@ -165,10 +179,6 @@ button{
         <input type="text" placeholder="Address" name="address">
 
         <input type="submit" value="Register">
-        <!-- <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div> -->
     </form>
 </body>
 </html>
